@@ -1,0 +1,51 @@
+﻿<Window x:Class="SkeletalViewer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Icon="SkeletalViewer.ico" ResizeMode="NoResize" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen"
+        Loaded="Window_Loaded" Closed="Window_Closed" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" d:DesignHeight="940" d:DesignWidth="1192">
+    <StackPanel Height="912" Width="1152">
+        <StackPanel Orientation="Horizontal" Width="1118">
+            <StackPanel Width="400">
+                <TextBox FontSize="18" Focusable="False" BorderThickness="0" Text="Depth Stream" HorizontalAlignment="Center"/>
+                <Image Width="342" Height="208" Name="depth" Margin="10 0 10 10"/>
+            </StackPanel>
+            <StackPanel>
+                <TextBox FontSize="18" Focusable="False" BorderThickness="0" Text="Skeleton (rendered if full body fits in frame)" HorizontalAlignment="Center"/>
+                <Canvas Width="342" Height="228" Name="skeleton" Margin="10 0 10 10" Background="Black" ClipToBounds="True"/>
+            </StackPanel>
+            <StackPanel>
+                <TextBox FontSize="18" Focusable="False" BorderThickness="0" Text="Color Video Stream" HorizontalAlignment="Center" Name="VideoCaption" />
+                <Image Width="328" Height="232" Name="video" Margin="10 0 10 10"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Width="1118">
+            <StackPanel>
+                <TextBox BorderThickness="0" Focusable="False" FontSize="18" HorizontalAlignment="Center" Text="Depth Stream" />
+                <Image Height="250" Margin="10 0 10 10" Name="depth2" Width="385" />
+            </StackPanel>
+            <Viewbox Width="368" Margin="10" Stretch="None" Height="178">
+                <TextBox FontSize="72" Name="frameRate" Margin="10" Focusable="False" BorderThickness="0" Text="0 fps" TextAlignment="Right" HorizontalAlignment="Center" VerticalAlignment="Center" Width="250"/>
+            </Viewbox>
+            <StackPanel>
+                <TextBox BorderThickness="0" Focusable="False" FontSize="18" HorizontalAlignment="Center" Name="textBox1" Text="Color Video Stream" />
+                <Image Height="258" Margin="10 0 10 10" Name="video2" Width="302" />
+            </StackPanel>
+        </StackPanel>
+        
+
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Height="348" Width="1120">
+            <StackPanel>
+                <TextBox BorderThickness="0" Focusable="False" FontSize="18" HorizontalAlignment="Center" Text="Depth Stream" />
+                <Image Height="235" Margin="10 0 10 10" Name="depth3" Width="372" />
+            </StackPanel>
+            <Viewbox Stretch="None" Width="355" Height="185">
+                <TextBox BorderThickness="0" Focusable="False" FontSize="72" HorizontalAlignment="Center" Margin="10" Name="textBox2" Text="AIS" TextAlignment="Right" VerticalAlignment="Center" Width="110" />
+            </Viewbox>
+            <StackPanel>
+                <TextBox BorderThickness="0" Focusable="False" FontSize="18" HorizontalAlignment="Center" Name="textBox3" Text="Color Video Stream" />
+                <Image Height="242" Margin="10 0 10 10" Name="video3" Width="348" />
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>
+    
+</Window>
